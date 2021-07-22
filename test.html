@@ -18,8 +18,8 @@
 
 		<br>
 
-		<button id="musicControl" type="button" >播放</button>
-		<button id="endMusic">结束</button>
+		<button id="musicControl" type="button" >播放音乐</button>
+		<button id="endMusic" onclick="window.close();">关闭界面</button>
 
 		<script type="text/javascript">
 			
@@ -29,24 +29,17 @@
 				
 				if(music.paused){
 					music.play();
-					buttonControl.innerHTML = "暂停";
+					buttonControl.innerHTML = "暂停音乐";
 				}
 				else {
 					music.pause();
-					buttonControl.innerHTML = "播放";
+					buttonControl.innerHTML = "播放音乐";
 				}
 			}
 			
-			function endMusic() {
-				Window.close();
-			}
-
 
 			var buttonControl = document.getElementById("musicControl");
 			buttonControl.addEventListener("click", playMusic);
-
-			var buttonEnd = document.getElementById("endMusic");
-			buttonEnd.addEventListener("click", endMusic);
 
 		</script>
 	</body>
